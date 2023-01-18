@@ -1,3 +1,4 @@
+
 c = int(input())
 f = int(input())
 
