@@ -1,9 +1,13 @@
-#A+B, A-B, A*B, A/B(몫), A%B(나머지)를 출력
-
 a, b = map(int,input().split())
 
-print(a+b)
-print(a-b)
-print(a*b)
-print(a//b)
-print(a%b)
+ans1 = a + b
+ans2 = a - b
+ans3 = a * b
+ans4 = a // b
+ans5 = a % b
+
+print(ans1)
+print(ans2)
+print(ans3)
+print(ans4)
+print(ans5)
