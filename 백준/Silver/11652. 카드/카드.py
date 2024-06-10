@@ -1,19 +1,15 @@
 import sys
 input = sys.stdin.readline
 
-d = dict()
-for _ in range(int(input())):
-    n = int(input()) 
-    if d.get(n):
-        d[n] += 1
-    else:
-        d[n] = 1
+dict_ = {}
+N = int(input())
+for i in range(N):
+    card = int(input())
+    
+    if card in dict_.keys():
+        dict_[card] += 1
+    elif card not in dict_.keys():
+        dict_[card] = 1
         
-ans,max_cnt = 0,0
-
-lst = sorted(d.items())
-for num, cnt in lst:
-    if max_cnt < cnt:
-        max_cnt = cnt
-        ans = num
-print(ans)
+sorted_dict = sorted(dict_.items(), key = lambda x : (-x[1],x[0]))
+print(sorted_dict[0][0])
