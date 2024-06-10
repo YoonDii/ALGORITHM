@@ -1,11 +1,9 @@
-n = int(input())
+N = int(input())
+list_ = []
+for i in range(N):
+    list_.append(int(input()))
+    
+list_.sort()
 
-nums = []
-
-for i in range(n):
-    nums.append(int(input()))
-s_nums = sorted(nums)
-#print(s_nums)
-for i in range(len(s_nums)):
-    #print(len(nums))
-    print(s_nums[i])
+for i in list_:
+    print(i)
