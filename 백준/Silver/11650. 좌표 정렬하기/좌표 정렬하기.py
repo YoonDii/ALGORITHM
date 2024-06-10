@@ -1,14 +1,12 @@
 import sys
-input=sys.stdin.readline
+N=int(sys.stdin.readline())
 
-n = int(input())
-nums = []
-for i in range(n):
-    a, b = map(int,input().split())
-    nums.append((a,b))
-    # print(nums) [(3, 4), (1, 1), (1, -1), (2, 2), (3, 3)]
-
-nums.sort(key= lambda x : (x[0],x[1]))
-
-for i in nums:
-    print(*i)
+list_ = []
+for i in range(N):
+    list_.append(list(map(int,sys.stdin.readline().split())))
+    
+#sorted_list = sorted(list_, key = lambda x : (x[1],x[0]))
+list_.sort()
+for i in list_:
+    print(i[0],i[1])
+    
